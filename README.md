@@ -1,4 +1,5 @@
- 
+Modified by Pablo Iglesias [@iPablo](https://github.com/iPablo "@iPablo") - runs with django 1.10
+
 Modified by Phoebe Bright - runs with django 1.9
 
 Django Model Report

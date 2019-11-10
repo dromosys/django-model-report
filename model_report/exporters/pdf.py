@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import cStringIO as StringIO
+from io import StringIO 
 from cgi import escape
 from xhtml2pdf import pisa
 

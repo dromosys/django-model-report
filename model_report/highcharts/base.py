@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy
-from django.utils.encoding import force_unicode
+from django.utils.encoding import force_text
 
 
 true = 'true'
@@ -11,7 +11,7 @@ Solid = 'Solid'
 outside = 'outside'
 
 
-_ = lambda s: force_unicode(ugettext_lazy(s))
+_ = lambda s: force_text(ugettext_lazy(s))
 
 
 class CollectionObject(object):

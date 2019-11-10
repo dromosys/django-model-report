@@ -2,7 +2,7 @@
 from decimal import Decimal
 from string import capwords
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import force_unicode
+from django.utils.encoding import force_text
 
 
 def base_label(report, field):
@@ -105,7 +105,7 @@ class ReportValue(object):
         """
         Render as text the value. This function also format the value.
         """
-        return force_unicode(self.format(self.value, instance=self))
+        return force_text(self.format(self.value, instance=self))
 
     def __repr__(self):
         return self.text()

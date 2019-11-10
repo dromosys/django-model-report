@@ -4,7 +4,7 @@ from django.template import RequestContext
 from django.http import Http404
 
 from model_report.report import reports
-
+from django.shortcuts import render
 
 def report_list(request):
     """
@@ -13,8 +13,7 @@ def report_list(request):
     context = {
         'report_list': reports.get_reports()
     }
-    return render_to_response('model_report/report_list.html', context,
-                              context_instance=RequestContext(request))
+    return render(request, 'model_report/report_list.html', context)
 
 
 def report(request, slug):

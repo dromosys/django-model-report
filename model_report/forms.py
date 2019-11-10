@@ -124,7 +124,7 @@ class FilterForm(forms.BaseForm):
                     field = self.fields[name]
                     if hasattr(field, 'queryset'):
                         qs = field.queryset
-                        if k in qs.model._meta.get_all_field_names():
+                        if k in qs.model._meta.get_fields():
                             field.queryset = qs.filter(Q(**{k: v}))
         except:
             pass
